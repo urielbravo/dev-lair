@@ -1,0 +1,7 @@
+.skill {
+  @apply flex flex-col items-center
+}
+
+.first_skill {
+  @apply flex flex-col items-center mt-5
+}
