@@ -55,7 +55,7 @@ export default function Layout ({ title, keywords, description, children }) {
       </div>
 
       {/* main content this is the container where all the content is */}
-      <main className="absolute top-16 bottom-0 md:left-48 overflow-y-auto min-w-fit bg-dark2 text-light2 right-0">
+      <main className="absolute top-16 bottom-0 md:left-48 overflow-y-auto bg-dark2 text-light2 right-0">
         <div className="flex-1 p-10">
           {children}
         </div>
