@@ -2,6 +2,8 @@ import Head from "next/head"
 import Image from 'next/future/image'
 import Script from "next/script"
 
+import gopher from '../public/images/icons/gopher.svg'
+
 export default function Layout ({ title, keywords, description, children }) {
   return (
     <div className="relative min-h-screen overflow-clip">
@@ -32,7 +34,7 @@ export default function Layout ({ title, keywords, description, children }) {
       <div className="fixed left-0 right-0 h-16 bg-dark0_soft text-light0 flex justify-between items-center">
         {/* logo */}
         <div className="flex items-center space-x-1 px-4">
-          <Image alt="logo" className="h-8 w-8" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/66955/gopher.svg" />
+          <Image alt="logo" className="h-8 w-8" src={gopher} />
           <a href="#" className="block text-light0_soft font-bold">Uriel&apos;s Lair</a>
         </div>
 
