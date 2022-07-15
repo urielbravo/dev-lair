@@ -15,9 +15,13 @@ export default function Card ({ projectTitle, projectDescription, projectImage, 
         </div>
         <footer className='flex justify-around absolute bottom-6 items-center space-x-3'>
           <span>Repo:</span>
-          <a href={repoLink}>
-            <Image className="w-10 h-10" src={githubLogo} alt="github" />
-          </a>
+          {repoLink ?
+            <a href={repoLink}>
+              <Image className="w-10 h-10" src={githubLogo} alt="github" />
+            </a>
+            :
+            <span>Not available/Private repo</span>
+          }
         </footer>
       </div>
     </div>

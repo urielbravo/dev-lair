@@ -51,7 +51,6 @@ export default function Project () {
         projectTitle="Revista Amiga"
         projectDescription="This is a react native app made for a magazine, both in IOS and Android"
         techUsed={[reactLogo, javascriptLogo, bootstrapLogo]}
-        repoLink='https://github.com/urielbravo/uriels-lair'
         alignEnd={true}
       />
       <Card 
@@ -59,14 +58,12 @@ export default function Project () {
         projectTitle="Buena Salud Revista"
         projectDescription="This is a react native app made for a magazine, both in IOS and Android"
         techUsed={[reactLogo, javascriptLogo, bootstrapLogo]}
-        repoLink='https://github.com/urielbravo/uriels-lair'
       />
       <Card 
         projectImage={ubigasImage}
         projectTitle="Ubigas"
         projectDescription="This is a react native app made for a magazine, both in IOS and Android"
         techUsed={[reactLogo, javascriptLogo, bootstrapLogo]}
-        repoLink='https://github.com/urielbravo/uriels-lair'
         alignEnd={true}
       />
     </div>

@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Image from 'next/future/image'
 import Script from "next/script"
+import Link from "next/link"
 
 import gopher from '../public/images/icons/gopher.svg'
 
@@ -50,9 +51,15 @@ export default function Layout ({ title, keywords, description, children }) {
       <div className="sidebar overflow-y-auto bg-dark0_soft text-light0_soft w-48 space-y-6 px-2 py-2 transform -translate-x-full fixed top-16 bottom-0 left-0 md:translate-x-0 transition duration-200 ease-in-out z-10">
         {/* nav the links to the different pages */}
         <nav>
-          <a href="#" className="py-2 5 px-4 flex items-center space-x-2  rounded hover:bg-dark2 hover:text-light0 transition duration-100">Home</a>
-          <a href="#" className="py-2 5 px-4 flex items-center space-x-2  rounded hover:bg-dark2 hover:text-light0 transition duration-100">Blog</a>
-          <a href="#" className="py-2 5 px-4 flex items-center space-x-2  rounded hover:bg-dark2 hover:text-light0 transition duration-100">Contact</a>
+          <Link href="/">
+            <a className="py-2 5 px-4 flex items-center space-x-2  rounded hover:bg-dark2 hover:text-light0 transition duration-100">Home</a>
+          </Link>
+          <Link href="/blog">
+            <a className="py-2 5 px-4 flex items-center space-x-2  rounded hover:bg-dark2 hover:text-light0 transition duration-100">Blog</a>
+          </Link>
+          <Link href="/contact">
+            <a className="py-2 5 px-4 flex items-center space-x-2  rounded hover:bg-dark2 hover:text-light0 transition duration-100">Contact</a>
+          </Link>
         </nav>
       </div>
 
