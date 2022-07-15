@@ -1,10 +1,14 @@
 import fs from 'fs'
 import path from 'path'
+import matter from 'gray-matter';
+
+// components
 import Layout from "../../components/layout";
 
 import BlogTitle from "../../components/blogTitle";
 
-export default function Blog () {
+export default function Blog ({posts}) {
+  console.log(posts);
   return (
     <Layout>
       <div className="flex flex-col items-center">
@@ -30,9 +34,9 @@ export async function getStaticProps() {
     }
   })
 
-  console.log('posts:', posts)
-
   return {
-    props: {}
+    props: {
+      posts
+    }
   }
 }
