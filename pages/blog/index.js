@@ -1,6 +1,6 @@
-import Layout from "../components/layout";
+import Layout from "../../components/layout";
 
-import BlogTitle from "../components/blogTitle";
+import BlogTitle from "../../components/blogTitle";
 
 export default function Blog () {
   return (
