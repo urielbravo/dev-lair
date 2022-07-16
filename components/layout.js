@@ -28,7 +28,7 @@ export default function Layout ({ title, keywords, description, children }) {
         <title>{title}</title>
         <meta name="keyword" content={keywords} />
         <meta name="description" content={description} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/svg" href="/images/skills/python-brands.svg" />
       </Head>
 
       {/* top bar */}
