@@ -2,12 +2,13 @@ import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter';
 
-import Image from 'next/future/image';
+import { sortByDate } from '../../utils';
 
 // components
 import Layout from "../../components/layout"
 import BlogTitle from "../../components/blogTitle"
 import PostCard from '../../components/postCard'
+import Title from '../../components/title';
 
 export default function Blog ({ posts }) {
   return (
@@ -15,16 +16,19 @@ export default function Blog ({ posts }) {
       <div className="flex flex-col items-center mb-10">
         <BlogTitle />
       </div>
-      <div className='flex'>
+        <div className='w-3/4'>
+          <Title sectionTitle="Latests posts" />
+        </div>
+      <div className='flex flex-col md:flex-row'>
         {/* posts */}
-        <section className='w-3/4 grid grid-cols-3 gap-5'>
+        <section className='w-3/4 grid lg:grid-cols-3 gap-5 sm:grid-cols-1 md:grid-cols-2'>
           {posts.map((post, index) => {
             return <PostCard key={index} post={post} />
           })}
         </section>
         {/* categories */}
         <section className='w-1/4 text-right'>
-          categories
+          <span className='font-bold text-xl'>categories</span>
         </section>
       </div>
     </Layout>
@@ -49,7 +53,7 @@ export async function getStaticProps () {
 
   return {
     props: {
-      posts
+      posts: posts.sort(sortByDate),
     }
   }
 }
